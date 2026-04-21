@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedShot — Privacy Policy</title>
+    <link rel="icon" type="image/png" href="images/appicon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: #0d0b1a;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .updated {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 1.25rem;
+            color: #ffffff;
+            margin-top: 36px;
+            margin-bottom: 12px;
+        }
+        p {
+            margin-bottom: 16px;
+            color: rgba(255,255,255,0.65);
+        }
+        ul {
+            margin-bottom: 16px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: rgba(255,255,255,0.6);
+        }
+        a { color: #f5c542; }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 32px;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: #f5c542; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">&larr; Back to MedShot</a>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last Updated: March 10, 2026</p>
+
+        <h2>Introduction</h2>
+        <p>MedShot is operated by Thryvenex Holdings LLC ("Company," "we," "our," or "us"). This Privacy Policy explains how we collect, use, store, and protect your personal and health-related information when you use the MedShot mobile application (the "App"). By creating an account or using the App, you consent to the practices described in this policy. MedShot is not a HIPAA covered entity or business associate. The App is a consumer organizational tool, not a healthcare provider or clinical system.</p>
+
+        <h2>1. Information We Collect</h2>
+        <p>We collect the minimum data necessary to provide our services:</p>
+        <ul>
+            <li><strong>Account Information:</strong> Name, email address, and authentication credentials. Accounts are managed via Supabase Auth. Passwords are hashed and never stored in plain text.</li>
+            <li><strong>Health-Related Data:</strong> Medication names, strengths, dosage forms, directions, frequencies, routes of administration, inventory counts, adherence logs (taken/missed/skipped doses), reminder schedules, food instructions, and time-of-day preferences. This data is user-entered or scanned via the App's camera feature.</li>
+            <li><strong>Profile Preferences:</strong> Wake/sleep times, notification preferences, notification sound selection, and dark mode preference.</li>
+            <li><strong>Camera & Image Data:</strong> When you use the Scanner, your device camera captures images of medication labels. Images are processed on-device using Apple Vision (OCR) and may be sent to Google Gemini API for AI-assisted text extraction. Images are processed ephemerally — they are NOT stored on our servers, NOT sold, NOT shared with third parties, and NOT used to train AI models.</li>
+            <li><strong>Device Information:</strong> Time zone (for scheduling reminders). We do NOT collect device identifiers, IP addresses, or location data.</li>
+            <li><strong>Analytics:</strong> We use Firebase Analytics (without advertising ID support) to collect anonymous usage data such as app opens, feature usage counts, and device type. This data is not linked to your identity and is used solely to improve the App. No medication names, health data, or personal information is included in analytics events.</li>
+            <li><strong>Drug Information Queries:</strong> When you view drug details, the App queries publicly available U.S. federal databases (DailyMed, openFDA, RxNorm, ClinicalTables, MedlinePlus) on your behalf. These are anonymous API calls that do not transmit your personal information.</li>
+            <li><strong>Financial Data:</strong> We do NOT process, collect, or store any payment or credit card information. All subscription transactions are handled entirely by Apple through the App Store's In-App Purchase system.</li>
+        </ul>
+
+        <h2>2. How We Use Your Information</h2>
+        <ul>
+            <li><strong>Core Services:</strong> To store your medications, track adherence, deliver scheduled reminders, and sync data to your account.</li>
+            <li><strong>AI Features:</strong> Medication label images and text may be processed by Google Gemini API solely for OCR extraction and drug information summarization. Your health data is NOT used to train, fine-tune, or improve any AI models. By using the Scanner or drug information features, you consent to this processing.</li>
+            <li><strong>Drug Information:</strong> To retrieve and cache publicly available drug label data from federal sources so you can view indications, warnings, interactions, and side effects.</li>
+            <li><strong>Notifications:</strong> To deliver the medication reminders you configure, using Apple's local notification system on your device.</li>
+            <li><strong>Analytics:</strong> To understand general usage patterns and improve the App's features and performance. Analytics data is anonymous and aggregated.</li>
+        </ul>
+
+        <h2>3. Data Storage & Security</h2>
+        <ul>
+            <li><strong>Encryption in Transit:</strong> All data transmitted between the App and our servers uses HTTPS/TLS encryption.</li>
+            <li><strong>Encryption at Rest:</strong> Your authentication tokens are stored in the iOS Keychain with device-only encryption (kSecAttrAccessibleWhenUnlockedThisDeviceOnly). Server-side data is encrypted at rest by our infrastructure provider.</li>
+            <li><strong>Access Control:</strong> Your data is protected by Row Level Security (RLS) policies — only you can read or modify your own records. No other user or administrator can access your medication or health data through the App.</li>
+            <li><strong>Infrastructure:</strong> Data is hosted on Supabase (built on PostgreSQL, hosted on AWS). AI processing uses Google Cloud infrastructure. Both providers maintain SOC 2 compliance.</li>
+            <li><strong>Breach Notification:</strong> In the event of a data breach involving your health-related information, we will notify affected users within sixty (60) days in accordance with the FTC Health Breach Notification Rule and applicable state laws.</li>
+            <li><strong>No Guarantees:</strong> While we employ industry-standard security measures, no method of electronic transmission or storage is 100% secure. We cannot guarantee absolute security.</li>
+        </ul>
+
+        <h2>4. Data Sharing & Third Parties</h2>
+        <p>We do NOT sell, rent, trade, or share your personal or health-related data with any third party for marketing, advertising, or data brokerage purposes.</p>
+        <ul>
+            <li><strong>Supabase (Database & Auth):</strong> Stores your account and medication data. Subject to Supabase's privacy policy and data processing terms.</li>
+            <li><strong>Google Gemini API (AI Processing):</strong> Processes medication label images and text for OCR and summarization only. Subject to Google's API Terms of Service. Data sent to Gemini is not used by Google to train generalized AI models per their API data usage policy.</li>
+            <li><strong>Firebase Analytics (Usage Analytics):</strong> Collects anonymous, non-identifying usage data (feature usage counts, device type). No health data, medication names, or personal information is sent to Firebase. Subject to Google's privacy policy.</li>
+            <li><strong>Apple (Payments & Notifications):</strong> Handles all subscription billing via the App Store. Delivers local notifications via iOS. Subject to Apple's privacy policy.</li>
+            <li><strong>U.S. Federal APIs (Drug Data):</strong> DailyMed, openFDA, RxNorm, ClinicalTables, and MedlinePlus are queried anonymously — no personal data is sent to these services.</li>
+            <li><strong>Legal Obligations:</strong> We may disclose your information if required by law, court order, subpoena, or to protect the rights, property, or safety of Thryvenex Holdings LLC, our users, or the public.</li>
+        </ul>
+
+        <h2>5. Data Retention & Deletion</h2>
+        <ul>
+            <li><strong>Active Account:</strong> Your data is retained for as long as your account is active.</li>
+            <li><strong>Account Deletion:</strong> You may permanently delete your account and ALL associated data at any time via Settings > Security > Delete Account. This action is irreversible and cascades to all medications, reminders, adherence logs, and profile data.</li>
+            <li><strong>Cached Drug Data:</strong> Publicly sourced drug information (from DailyMed, openFDA) is cached in shared tables to improve performance. This data is not personal and is not deleted when you delete your account.</li>
+            <li><strong>Backups:</strong> Server-side backups maintained by our infrastructure provider may retain deleted data for a limited period consistent with their retention policies before permanent erasure.</li>
+        </ul>
+
+        <h2>6. Your Rights</h2>
+        <ul>
+            <li><strong>Access & Edit:</strong> You can view and edit your profile, medications, and adherence data at any time within the App.</li>
+            <li><strong>Delete:</strong> You can permanently delete your account and all associated data via Settings > Security.</li>
+            <li><strong>Portability:</strong> You may request a copy of your data by contacting us at the email below.</li>
+            <li><strong>California Residents (CCPA/CPRA):</strong> You have the right to know what personal information we collect, request its deletion, and opt out of its sale. We do NOT sell personal information. To exercise your rights, contact us at the email below.</li>
+            <li><strong>Washington Residents (My Health My Data Act):</strong> You have the right to know what consumer health data we collect, request its deletion, and withdraw consent for its collection or sharing. We collect health-related data (medication names, dosages, adherence logs) solely to provide you the App's services. We do not sell or share consumer health data. To exercise your rights, contact us at the email below.</li>
+            <li><strong>Nevada & Connecticut Residents:</strong> You may opt out of the sale of your personal data and exercise rights under your state's consumer health data privacy laws. We do not sell personal data. Contact us to exercise your rights.</li>
+            <li><strong>Canadian Residents (PIPEDA):</strong> You have the right to access your personal information, request corrections, and withdraw consent for its use. We collect and process your data only with your consent and for the purposes described in this policy. Contact us to exercise your rights.</li>
+            <li><strong>EU/EEA Residents (GDPR):</strong> If applicable, you have the right to access, rectify, erase, restrict processing of, and port your personal data, as well as the right to object to processing. Our legal basis for processing is your consent (provided at account creation) and legitimate interest in providing the service. Contact us to exercise these rights.</li>
+        </ul>
+
+        <h2>7. Children's Privacy</h2>
+        <p>MedShot is not intended for use by children under the age of 17. We do not knowingly collect personal information from children under 17. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately and we will delete such information.</p>
+
+        <h2>8. Analytics</h2>
+        <p>MedShot uses Firebase Analytics (without advertising identifier support) to collect anonymous, aggregated usage data. This includes general feature usage counts (such as how many scans or dose logs occur), device type, and app version. No medication names, health data, personal information, or advertising identifiers are collected. This data is used solely to understand usage patterns and improve the App. MedShot does not use advertising SDKs, fingerprinting, or cross-app tracking.</p>
+
+        <h2>9. HIPAA Non-Applicability</h2>
+        <p>MedShot is a consumer organizational tool and is NOT a covered entity or business associate as defined under the Health Insurance Portability and Accountability Act (HIPAA). The App does not access, store, or transmit Protected Health Information (PHI) from healthcare providers, health plans, or healthcare clearinghouses. Your medication data is self-reported and is not subject to HIPAA regulations. Standard consumer privacy protections described in this policy apply.</p>
+
+        <h2>10. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last Updated" date at the top of this policy. Continued use of the App after changes constitutes acceptance. We encourage you to review this policy periodically.</p>
+
+        <h2>11. Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or wish to exercise your data rights, contact us:</p>
+        <p><strong>Thryvenex Holdings LLC</strong><br><a href="mailto:MedShot.Assist@gmail.com">MedShot.Assist@gmail.com</a></p>
+    </div>
+</body>
+</html>
