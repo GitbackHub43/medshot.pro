@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedShot — Scan. Track. Get notified.</title>
+    <meta name="description" content="MedShot is a medication management app built by a pharmacist. Scan your prescription label, track doses, get reminders, and access real drug information.">
+    <link rel="icon" type="image/png" href="images/appicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: #0d0b1a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1040 0%, #0d0b1a 40%, #1a0f3a 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 24px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 30%, rgba(107, 78, 180, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .app-icon {
+            width: 140px;
+            height: 140px;
+            border-radius: 28px;
+            margin-bottom: 32px;
+            box-shadow: 0 20px 60px rgba(107, 78, 180, 0.4);
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .hero h1 span {
+            color: #f5c542;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .app-store-badge {
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+
+        .app-store-badge:hover {
+            transform: scale(1.05);
+        }
+
+        .app-store-badge img {
+            height: 54px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 24px;
+            background: linear-gradient(180deg, #0d0b1a 0%, #131028 100%);
+        }
+
+        .features-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #ffffff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 36px 28px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(107, 78, 180, 0.4);
+        }
+
+        .feature-icon {
+            font-size: 2.4rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Built By Section */
+        .built-by {
+            padding: 80px 24px;
+            background: #0d0b1a;
+            text-align: center;
+        }
+
+        .built-by-container {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .built-by h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .built-by p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 24px;
+            background: linear-gradient(135deg, #1a1040 0%, #2a1860 100%);
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 32px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 24px;
+            background: #0a0816;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #f5c542;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .app-icon {
+                width: 110px;
+                height: 110px;
+            }
+
+            .features h2 {
+                font-size: 1.6rem;
+            }
+
+            .feature-card {
+                padding: 28px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="images/appicon.png" alt="MedShot App Icon" class="app-icon">
+            <h1>Scan. Track.<br><span>Get notified.</span></h1>
+            <p class="subtitle">Manage your medications all in one place.</p>
+            <a href="https://apps.apple.com/us/app/medshot/id6758529079" class="app-store-badge" target="_blank" rel="noopener">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
+            </a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="features-container">
+            <h2>Everything you need. Nothing you don't.</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📷</div>
+                    <h3>Scan Your Label</h3>
+                    <p>Point your camera at any prescription bottle. MedShot reads the drug name, strength, directions, and quantity automatically.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💊</div>
+                    <h3>Track Every Dose</h3>
+                    <p>One-tap logging for every dose. See your daily schedule, mark doses as taken or skipped, and track adherence over time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Never Miss a Dose</h3>
+                    <p>Get reminders at the times you set. Get alerted when you're running low so you never miss a refill.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Real Drug Information</h3>
+                    <p>Uses, side effects, food instructions, and storage — sourced from trusted clinical databases. No AI guessing. No made-up answers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">❓</div>
+                    <h3>Ask Questions</h3>
+                    <p>Type a question like "Can I take ibuprofen with warfarin?" and get a clear, sourced answer instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Private and Secure</h3>
+                    <p>Your medication data stays on your device and your secure account. No ads. No data selling. No tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Built By -->
+    <section class="built-by">
+        <div class="built-by-container">
+            <h2>Built by a pharmacist.</h2>
+            <p>MedShot was built by a working pharmacist who saw the same problems every day — missed doses, confusing labels, and questions that never got asked. Every feature is designed around what people actually struggle with, not what looks good on a slide deck.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Start managing your meds the right way.</h2>
+        <p>Available now on the App Store.</p>
+        <a href="https://apps.apple.com/us/app/medshot/id6758529079" class="app-store-badge" target="_blank" rel="noopener">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://apps.apple.com/us/app/medshot/id6758529079" target="_blank">App Store</a>
+            <a href="mailto:support@medshot.pro">Contact Support</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Thryvenex Holdings LLC. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
