@@ -59,22 +59,23 @@
         }
 
         .app-title {
-            font-size: 3.6rem;
+            font-size: 3.8rem;
             font-weight: 800;
             letter-spacing: -1px;
             margin-bottom: 16px;
-            background: linear-gradient(135deg, #f5c542 0%, #e8b830 30%, #c9a0ff 70%, #9b6dff 100%);
+            background: linear-gradient(90deg, #f5c542, #ff9f43, #c9a0ff, #9b6dff, #f5c542);
+            background-size: 300% 100%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: none;
-            filter: drop-shadow(0 4px 20px rgba(155, 109, 255, 0.4));
-            animation: titleGlow 3s ease-in-out infinite alternate;
+            animation: titleShimmer 4s ease-in-out infinite;
+            filter: drop-shadow(0 4px 25px rgba(155, 109, 255, 0.5));
         }
 
-        @keyframes titleGlow {
-            0% { filter: drop-shadow(0 4px 20px rgba(155, 109, 255, 0.3)); }
-            100% { filter: drop-shadow(0 4px 30px rgba(245, 197, 66, 0.5)); }
+        @keyframes titleShimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .tagline {
