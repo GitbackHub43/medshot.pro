@@ -136,7 +136,7 @@
 
         .scroll-hint {
             position: absolute;
-            bottom: 28px;
+            bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1;
@@ -154,6 +154,96 @@
         @keyframes scrollBounce {
             0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.3; }
             50% { transform: translateX(-50%) translateY(8px); opacity: 0.7; }
+        }
+
+        /* Pain Points Section */
+        .pain-points {
+            padding: 80px 24px;
+            background: linear-gradient(180deg, #0d0b1a 0%, #131028 100%);
+        }
+
+        .pain-points-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pain-points h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #ffffff;
+        }
+
+        .pain-points .section-sub {
+            text-align: center;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 50px;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .pain-card {
+            text-align: center;
+        }
+
+        .pain-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .pain-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 0 8px;
+        }
+
+        .see-below {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .see-below p {
+            font-size: 1.15rem;
+            color: #f5c542;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .see-below .down-arrow {
+            width: 28px;
+            height: 28px;
+            border-right: 2.5px solid #f5c542;
+            border-bottom: 2.5px solid #f5c542;
+            transform: rotate(45deg);
+            margin: 0 auto;
+            animation: seeArrowBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes seeArrowBounce {
+            0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.5; }
+            50% { transform: rotate(45deg) translateY(6px); opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            .pain-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .pain-card img {
+                height: 200px;
+            }
         }
 
         /* Features Section */
@@ -376,6 +466,32 @@
         </div>
         <div class="scroll-hint">
             <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Pain Points -->
+    <section class="pain-points">
+        <div class="pain-points-container">
+            <h2>Sound familiar?</h2>
+            <p class="section-sub">Managing medications shouldn't feel this hard.</p>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <img src="images/pain1.jpg" alt="Overwhelmed by medications">
+                    <p>Struggling to keep track of multiple medications, dosages, and schedules.</p>
+                </div>
+                <div class="pain-card">
+                    <img src="images/pain2.jpg" alt="On hold with pharmacy">
+                    <p>Waiting on hold just to ask a simple question about your medication.</p>
+                </div>
+                <div class="pain-card">
+                    <img src="images/pain3.jpg" alt="Empty prescription bottle">
+                    <p>Running out of your medication because you forgot to refill on time.</p>
+                </div>
+            </div>
+            <div class="see-below">
+                <p>See how MedShot can help</p>
+                <div class="down-arrow"></div>
+            </div>
         </div>
     </section>
 
