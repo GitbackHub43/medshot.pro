@@ -148,6 +148,14 @@
             text-align: center;
         }
 
+        .sound-familiar {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 500;
+            margin-top: 40px;
+            margin-bottom: 8px;
+        }
+
         .pain-card img {
             width: 100%;
             height: 180px;
@@ -155,8 +163,12 @@
             object-position: top;
             border-radius: 14px;
             margin-bottom: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(255, 255, 255, 0.08);
         }
+
+        .pain-card img.border-gold { border-color: rgba(245, 197, 66, 0.5); }
+        .pain-card img.border-purple { border-color: rgba(155, 109, 255, 0.5); }
+        .pain-card img.border-teal { border-color: rgba(72, 209, 204, 0.5); }
 
         .pain-card p {
             font-size: 0.85rem;
@@ -167,7 +179,7 @@
 
         .see-below {
             text-align: center;
-            margin-top: 28px;
+            margin-top: 16px;
         }
 
         .see-below p {
@@ -178,18 +190,21 @@
         }
 
         .see-below .down-arrow {
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             border-right: 2.5px solid #f5c542;
             border-bottom: 2.5px solid #f5c542;
             transform: rotate(45deg);
             margin: 0 auto;
+        }
+
+        .see-below {
             animation: seeArrowBounce 2s ease-in-out infinite;
         }
 
         @keyframes seeArrowBounce {
-            0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.5; }
-            50% { transform: rotate(45deg) translateY(6px); opacity: 1; }
+            0%, 100% { transform: translateY(0); opacity: 0.6; }
+            50% { transform: translateY(6px); opacity: 1; }
         }
 
         @media (max-width: 600px) {
@@ -424,28 +439,28 @@
     <section class="hero">
         <div class="hero-content">
             <h1 class="app-title">MedShot</h1>
-            <img src="images/logo.png" alt="MedShot Logo" class="app-logo">
             <h2 class="tagline">Scan. Track. <span>Get notified.</span></h2>
-
-            <div class="pain-grid">
-                <div class="pain-card">
-                    <img src="images/pain1.jpg" alt="Overwhelmed by medications">
-                    <p>Struggling to keep track of multiple medications and schedules.</p>
-                </div>
-                <div class="pain-card">
-                    <img src="images/pain2.jpg" alt="On hold with pharmacy">
-                    <p>Waiting on hold just to ask a simple question about your medication.</p>
-                </div>
-                <div class="pain-card">
-                    <img src="images/pain3.jpg" alt="Empty prescription bottle">
-                    <p>Forgetting to refill and running out at your next dose.</p>
-                </div>
-            </div>
-
+            <img src="images/logo.png" alt="MedShot Logo" class="app-logo">
             <p class="subtitle">Manage your medications — all in one place.</p>
             <a href="https://apps.apple.com/us/app/medshot/id6758529079" class="app-store-badge" target="_blank" rel="noopener">
                 <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
             </a>
+
+            <h3 class="sound-familiar">Sound familiar?</h3>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <img src="images/pain1.jpg" alt="Overwhelmed by medications" class="border-gold">
+                    <p>Struggling to keep track of multiple medications and schedules.</p>
+                </div>
+                <div class="pain-card">
+                    <img src="images/pain2.jpg" alt="On hold with pharmacy" class="border-purple">
+                    <p>Waiting on hold just to ask a simple question about your medication.</p>
+                </div>
+                <div class="pain-card">
+                    <img src="images/pain3.jpg" alt="Empty prescription bottle" class="border-teal">
+                    <p>Forgetting to refill and running out at your next dose.</p>
+                </div>
+            </div>
 
             <div class="see-below">
                 <p>See how MedShot can help</p>
