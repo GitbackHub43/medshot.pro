@@ -612,23 +612,12 @@
         }
 
         .follow-arrow {
-            font-size: 1.4rem;
-            font-weight: bold;
+            animation: arrowBob 1.5s ease-in-out infinite;
         }
 
-        .follow-arrow.left {
-            color: #f5c542;
-            animation: arrowDown 1.5s ease-in-out infinite;
-        }
-
-        .follow-arrow.right {
-            color: #b388ff;
-            animation: arrowDown 1.5s ease-in-out infinite;
-        }
-
-        @keyframes arrowDown {
-            0%, 100% { transform: translateY(0); opacity: 0.4; }
-            50% { transform: translateY(4px); opacity: 1; }
+        @keyframes arrowBob {
+            0%, 100% { transform: translateY(0); opacity: 0.5; }
+            50% { transform: translateY(5px); opacity: 1; }
         }
 
         .footer-copy {
@@ -747,8 +736,9 @@
                             <div class="ss-scroll" onscroll="updateDots(this)">
                                 <img src="images/ss-scan.png" alt="Scanner screenshot">
                                 <img src="images/ss-scan2.png" alt="Scanner screenshot 2">
+                                <img src="images/ss-scan3.png" alt="Scanner screenshot 3">
                             </div>
-                            <div class="ss-dots"><span class="dot active"></span><span class="dot"></span></div>
+                            <div class="ss-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
                             <span class="swipe-hint">Swipe</span>
                         </div>
                     </div>
@@ -761,9 +751,13 @@
                             <p>One-tap logging for every dose. See your daily schedule, mark doses as taken or skipped, and track adherence over time.</p>
                         </div>
                         <div class="flip-card-back">
-                            <div class="ss-scroll">
+                            <div class="ss-scroll" onscroll="updateDots(this)">
                                 <img src="images/ss-track.png" alt="Today tab screenshot">
+                                <img src="images/ss-track2.png" alt="Today tab screenshot 2">
+                                <img src="images/ss-track3.png" alt="Today tab screenshot 3">
                             </div>
+                            <div class="ss-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+                            <span class="swipe-hint">Swipe</span>
                         </div>
                     </div>
                 </div>
@@ -792,9 +786,12 @@
                             <p>Uses, side effects, food instructions, and storage — sourced from trusted clinical databases. No AI guessing. No made-up answers.</p>
                         </div>
                         <div class="flip-card-back">
-                            <div class="ss-scroll">
+                            <div class="ss-scroll" onscroll="updateDots(this)">
                                 <img src="images/ss-real.png" alt="Drug info screenshot">
+                                <img src="images/ss-real2.jpg" alt="Drug info screenshot 2">
                             </div>
+                            <div class="ss-dots"><span class="dot active"></span><span class="dot"></span></div>
+                            <span class="swipe-hint">Swipe</span>
                         </div>
                     </div>
                 </div>
@@ -808,13 +805,14 @@
                         <div class="flip-card-back">
                             <div class="ss-scroll" onscroll="updateDots(this)">
                                 <img src="images/ss-ask.png" alt="Drug Q&A screenshot">
+                                <img src="images/ss-ask-db.png" alt="Drug Database screenshot">
                                 <img src="images/ss-ask2.png" alt="Drug Q&A screenshot 2">
                                 <img src="images/ss-ask3.png" alt="Drug Q&A screenshot 3">
                                 <img src="images/ss-ask4.png" alt="Drug Q&A screenshot 4">
                                 <img src="images/ss-ask5.png" alt="Drug Q&A screenshot 5">
                                 <img src="images/ss-ask6.png" alt="Drug Q&A screenshot 6">
                             </div>
-                            <div class="ss-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                            <div class="ss-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
                             <span class="swipe-hint">Swipe</span>
                         </div>
                     </div>
@@ -860,9 +858,9 @@
     <!-- Footer -->
     <footer>
         <div class="follow-row">
-            <span class="follow-arrow left">↷</span>
+            <svg class="follow-arrow left" viewBox="0 0 50 50" width="32" height="32"><path d="M10 5 C10 30, 35 35, 40 45 L35 40 M40 45 L44 38" stroke="#f5c542" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
             <p class="follow-text">Follow us for more on the app</p>
-            <span class="follow-arrow right">↶</span>
+            <svg class="follow-arrow right" viewBox="0 0 50 50" width="32" height="32"><path d="M40 5 C40 30, 15 35, 10 45 L15 40 M10 45 L6 38" stroke="#b388ff" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
         </div>
         <div class="social-icons">
             <a href="https://www.instagram.com/medshotapp" target="_blank" rel="noopener" aria-label="Instagram" class="ig">
