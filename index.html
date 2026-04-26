@@ -499,6 +499,34 @@
             margin-bottom: 32px;
         }
 
+        .cta-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
+
+        .cta-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 14px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-img.pulse-gold { animation: pulseGold 2.5s ease-in-out infinite; }
+        .cta-img.pulse-purple { animation: pulsePurple 2.5s ease-in-out infinite; }
+        .cta-img.pulse-teal { animation: pulseTeal 2.5s ease-in-out infinite; }
+
+        @media (max-width: 600px) {
+            .cta-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            .cta-img { height: 130px; }
+        }
+
         /* Footer */
         footer {
             padding: 40px 24px;
@@ -815,6 +843,14 @@
     <!-- CTA -->
     <section class="cta">
         <p style="font-size: 1.3rem; color: rgba(255,255,255,0.7); margin-bottom: 14px; font-weight: 500;">Start managing your medications the right way.</p>
+        <div class="cta-grid">
+            <img src="images/cta1.png" alt="App icon on phone" class="cta-img pulse-gold">
+            <img src="images/cta2.png" alt="App promo" class="cta-img pulse-purple">
+            <img src="images/cta3.png" alt="App promo" class="cta-img pulse-teal">
+            <img src="images/cta4.jpeg" alt="Using MedShot" class="cta-img pulse-gold">
+            <img src="images/cta5.jpeg" alt="Happy with meds" class="cta-img pulse-purple">
+            <img src="images/cta6.jpeg" alt="Pharmacy pickup" class="cta-img pulse-teal">
+        </div>
         <h2>Available now.</h2>
         <a href="https://apps.apple.com/us/app/medshot/id6758529079" class="app-store-badge" target="_blank" rel="noopener">
             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
