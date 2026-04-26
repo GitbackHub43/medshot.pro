@@ -123,7 +123,22 @@
 
         .app-store-badge {
             display: inline-block;
+            position: relative;
+            padding: 3px;
+            border-radius: 14px;
+            background: conic-gradient(from var(--angle), #f5c542, #ff6b6b, #b388ff, #48d1cc, #f5c542);
+            animation: rotateBorder 3s linear infinite;
             transition: transform 0.2s ease;
+        }
+
+        @property --angle {
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        @keyframes rotateBorder {
+            to { --angle: 360deg; }
         }
 
         .app-store-badge:hover {
@@ -132,6 +147,8 @@
 
         .app-store-badge img {
             height: 54px;
+            display: block;
+            border-radius: 12px;
         }
 
         /* Pain Points + See Below */
