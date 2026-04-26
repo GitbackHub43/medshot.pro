@@ -614,14 +614,10 @@
 
         .follow-arrows-row {
             display: flex;
-            justify-content: space-between;
-            width: 300px;
+            justify-content: center;
+            gap: 160px;
             margin: 0 auto;
             animation: arrowBob 1.5s ease-in-out infinite;
-        }
-
-        .swoopy-arrow {
-            display: block;
         }
 
         @keyframes arrowBob {
@@ -867,13 +863,13 @@
         <div class="follow-row">
             <p class="follow-text">Follow us for more on the app</p>
             <div class="follow-arrows-row">
-                <svg class="swoopy-arrow left" viewBox="0 0 100 100" width="50" height="50">
-                    <path d="M20 10 Q5 50 40 80" stroke="#f5c542" stroke-width="4" fill="none" stroke-linecap="round"/>
-                    <path d="M40 80 L30 72 M40 80 L44 70" stroke="#f5c542" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <svg viewBox="0 0 50 60" width="44" height="52">
+                    <path d="M10 2 C2 20, 2 40, 28 55" stroke="#f5c542" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <polygon points="32,58 24,56 26,48" fill="#f5c542"/>
                 </svg>
-                <svg class="swoopy-arrow right" viewBox="0 0 100 100" width="50" height="50">
-                    <path d="M80 10 Q95 50 60 80" stroke="#b388ff" stroke-width="4" fill="none" stroke-linecap="round"/>
-                    <path d="M60 80 L56 70 M60 80 L70 72" stroke="#b388ff" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <svg viewBox="0 0 50 60" width="44" height="52">
+                    <path d="M40 2 C48 20, 48 40, 22 55" stroke="#b388ff" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <polygon points="18,58 24,48 26,56" fill="#b388ff"/>
                 </svg>
             </div>
         </div>
