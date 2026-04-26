@@ -375,6 +375,15 @@
             flex-shrink: 0;
         }
 
+        .flip-card-back .ss-scroll img.zoom-in {
+            object-fit: cover;
+            object-position: center 30%;
+        }
+
+        .flip-card-back .ss-scroll img.zoom-out {
+            transform: scale(0.85);
+        }
+
         .ss-dots {
             position: absolute;
             bottom: 10px;
@@ -672,27 +681,36 @@
                 padding: 28px 20px;
             }
 
+            .pain-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
             .pain-card img {
-                height: 130px;
-                object-fit: cover;
-                object-position: center 50%;
-            }
-
-            .pain-double img {
-                height: 130px;
-                object-fit: cover;
-                object-position: center 50%;
-            }
-
-            .cta-img {
-                height: 110px;
+                height: 200px;
                 object-fit: cover;
                 object-position: center 40%;
             }
 
-            .flip-card-back .ss-scroll img {
-                object-fit: contain;
-                transform: scale(1.025);
+            .pain-double {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pain-double img {
+                height: 160px;
+                object-fit: cover;
+                object-position: center 40%;
+            }
+
+            .cta-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .cta-img {
+                height: 140px;
+                object-fit: cover;
+                object-position: center 30%;
             }
         }
     </style>
@@ -782,8 +800,8 @@
                         </div>
                         <div class="flip-card-back">
                             <div class="ss-scroll" onscroll="updateDots(this)">
-                                <img src="images/ss-scan1.png" alt="Scanner screenshot 1">
-                                <img src="images/ss-scan2.png" alt="Scanner screenshot 2">
+                                <img src="images/ss-scan1.png" alt="Scanner screenshot 1" class="zoom-in">
+                                <img src="images/ss-scan2.png" alt="Scanner screenshot 2" class="zoom-in">
                                 <img src="images/ss-scan3.png" alt="Scanner screenshot 3">
                             </div>
                             <div class="ss-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
@@ -800,9 +818,9 @@
                         </div>
                         <div class="flip-card-back">
                             <div class="ss-scroll" onscroll="updateDots(this)">
-                                <img src="images/ss-track1.png" alt="Today tab screenshot 1">
+                                <img src="images/ss-track1.png" alt="Today tab screenshot 1" class="zoom-in">
                                 <img src="images/ss-track2.png" alt="Today tab screenshot 2">
-                                <img src="images/ss-track3.png" alt="Today tab screenshot 3">
+                                <img src="images/ss-track3.png" alt="Today tab screenshot 3" class="zoom-out">
                             </div>
                             <div class="ss-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
                             <span class="swipe-hint">Swipe</span>
