@@ -615,9 +615,22 @@
         .follow-arrows-row {
             display: flex;
             justify-content: space-between;
-            width: 280px;
+            width: 300px;
             margin: 0 auto;
             animation: arrowBob 1.5s ease-in-out infinite;
+        }
+
+        .swoopy-arrow {
+            font-size: 3.5rem;
+            line-height: 1;
+        }
+
+        .swoopy-arrow.left {
+            color: #f5c542;
+        }
+
+        .swoopy-arrow.right {
+            color: #b388ff;
         }
 
         @keyframes arrowBob {
@@ -863,8 +876,8 @@
         <div class="follow-row">
             <p class="follow-text">Follow us for more on the app</p>
             <div class="follow-arrows-row">
-                <svg class="follow-arrow" viewBox="0 0 70 70" width="55" height="55"><path d="M5 5 C5 35, 35 50, 45 62" stroke="#f5c542" stroke-width="3" fill="none" stroke-linecap="round"/><polygon points="48,68 38,60 48,57" fill="#f5c542"/></svg>
-                <svg class="follow-arrow" viewBox="0 0 70 70" width="55" height="55"><path d="M65 5 C65 35, 35 50, 25 62" stroke="#b388ff" stroke-width="3" fill="none" stroke-linecap="round"/><polygon points="22,68 22,57 32,60" fill="#b388ff"/></svg>
+                <span class="swoopy-arrow left">⤷</span>
+                <span class="swoopy-arrow right">⤶</span>
             </div>
         </div>
         <div class="social-icons">
