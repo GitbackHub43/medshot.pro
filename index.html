@@ -142,8 +142,8 @@
             border: 2px solid rgba(255, 255, 255, 0.08);
         }
 
-        .pain-card img.border-gold { border-color: rgba(245, 197, 66, 0.5); animation: pulseGold 2.5s ease-in-out infinite; }
-        .pain-card img.border-purple { border-color: rgba(107, 64, 209, 0.5); animation: pulsePurple 2.5s ease-in-out infinite; }
+        .pain-card img.border-gold { border-color: rgba(245, 197, 66, 0.5); }
+        .pain-card img.border-purple { border-color: rgba(107, 64, 209, 0.5); }
 
         @keyframes pulseGold {
             0%, 100% { border-color: rgba(245, 197, 66, 0.3); box-shadow: 0 0 8px rgba(245, 197, 66, 0.1); }
@@ -193,13 +193,13 @@
             margin: 0 auto;
         }
 
-        .see-below {
+        .see-below .down-arrow {
             animation: seeArrowBounce 2s ease-in-out infinite;
         }
 
         @keyframes seeArrowBounce {
-            0%, 100% { transform: translateY(0); opacity: 0.6; }
-            50% { transform: translateY(6px); opacity: 1; }
+            0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.6; }
+            50% { transform: rotate(45deg) translateY(6px); opacity: 1; }
         }
 
         @media (max-width: 600px) {
@@ -493,8 +493,8 @@
             border: 2px solid rgba(255, 255, 255, 0.1);
         }
 
-        .cta-img.pulse-gold { animation: pulseGold 2.5s ease-in-out infinite; }
-        .cta-img.pulse-purple { animation: pulsePurple 2.5s ease-in-out infinite; }
+        .cta-img.pulse-gold { border-color: rgba(245, 197, 66, 0.5); }
+        .cta-img.pulse-purple { border-color: rgba(107, 64, 209, 0.5); }
 
         @media (max-width: 600px) {
             .cta-grid {
